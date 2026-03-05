@@ -132,6 +132,7 @@ jobs:
           echo "==> YouTube v$youtube_version downloaded!"
           sed -i '' "17s#.*#YOUTUBE_VERSION = ${youtube_version}#g" Makefile
           echo "youtube_version=${youtube_version}" >> $GITHUB_OUTPUT
+          echo "$YOUTUBE_URL"
 
         env:
           THEOS: ${{ github.workspace }}/theos
